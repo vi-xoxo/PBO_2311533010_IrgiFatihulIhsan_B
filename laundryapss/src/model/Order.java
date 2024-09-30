@@ -1,9 +1,8 @@
 package model;
 
 public class Order {
-	
 	String id, id_costumer, id_service, id_user, tanggal, tanggal_selesai, status, status_pembayaran;
-	Double total;
+	int total;
 	public String getId() {
 		return id;
 	}
@@ -52,11 +51,16 @@ public class Order {
 	public void setStatus_pembayaran(String status_pembayaran) {
 		this.status_pembayaran = status_pembayaran;
 	}
-	public Double getTotal() {
+	public int getTotal() {
 		return total;
 	}
-	public void setTotal(Double total) {
+	public void setTotal(int total) {
 		this.total = total;
 	}
-
+	
+	
+	
+	
+	
+	
 }
