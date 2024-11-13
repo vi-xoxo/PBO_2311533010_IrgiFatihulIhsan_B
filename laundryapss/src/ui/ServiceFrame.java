@@ -69,7 +69,7 @@ public class ServiceFrame extends JFrame {
 	}
 	
 	public ServiceFrame() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -83,7 +83,7 @@ public class ServiceFrame extends JFrame {
 		panel.setLayout(null);
 		
 		JLabel lblJenis = new JLabel("Jenis");
-		lblJenis.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		lblJenis.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblJenis.setBounds(70, 25, 45, 25);
 		panel.add(lblJenis);
 		
@@ -93,7 +93,7 @@ public class ServiceFrame extends JFrame {
 		txtJenis.setColumns(10);
 		
 		JLabel lblStatus = new JLabel("Status");
-		lblStatus.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		lblStatus.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblStatus.setBounds(70, 75, 76, 25);
 		panel.add(lblStatus);
 		
@@ -103,7 +103,7 @@ public class ServiceFrame extends JFrame {
 		panel.add(txtStatus);
 		
 		JLabel lblHarga = new JLabel("Harga");
-		lblHarga.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		lblHarga.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblHarga.setBounds(70, 122, 76, 25);
 		panel.add(lblHarga);
 		
@@ -124,7 +124,7 @@ public class ServiceFrame extends JFrame {
 				loadTable();
 			}
 		});
-		btnSave.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnSave.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnSave.setBounds(165, 193, 85, 40);
 		panel.add(btnSave);
 		
@@ -146,7 +146,7 @@ public class ServiceFrame extends JFrame {
 				}
 			}
 		});
-		btnUpdate.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnUpdate.setBounds(271, 193, 85, 40);
 		panel.add(btnUpdate);
 		
@@ -162,7 +162,7 @@ public class ServiceFrame extends JFrame {
 				}
 			}
 		});
-		btnDelete.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnDelete.setBounds(383, 193, 85, 40);
 		panel.add(btnDelete);
 		
@@ -174,7 +174,7 @@ public class ServiceFrame extends JFrame {
 				dispose();
 			}
 		});
-		btnCancel.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnCancel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnCancel.setBounds(585, 193, 85, 40);
 		panel.add(btnCancel);
 		
@@ -193,10 +193,6 @@ public class ServiceFrame extends JFrame {
 			}
 		});
 		scrollPane.setViewportView(tableService);
-		
-		
-		
-		
 		
 	}
 }

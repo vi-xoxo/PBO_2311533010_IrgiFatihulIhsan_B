@@ -43,4 +43,10 @@ public class TableCostumer extends AbstractTableModel {
 			return null;
 		}
 	}
+	
+	public Costumer getCostumerAt(int rowIndex) {
+
+        return ls.get(rowIndex);
+
+    }
 }

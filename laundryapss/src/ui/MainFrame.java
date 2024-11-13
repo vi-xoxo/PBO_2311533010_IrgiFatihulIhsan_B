@@ -8,6 +8,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainFrame extends JFrame {
 
@@ -48,16 +50,37 @@ public class MainFrame extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton("Pesanan");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				OrderFrame order = new OrderFrame();
+				order.setVisible(true);
+				order.loadTable();
+			}
+		});
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton.setBounds(100, 161, 145, 100);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Layanan");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ServiceFrame service = new ServiceFrame();
+				service.setVisible(true);
+				service.loadTable();
+			}
+		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton_1.setBounds(300, 161, 145, 100);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_1_1 = new JButton("Pelanggan");
+		btnNewButton_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CostumerFrame costumer = new CostumerFrame();
+				costumer.setVisible(true);
+				costumer.loadTable();
+			}
+		});
 		btnNewButton_1_1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton_1_1.setBounds(500, 161, 145, 100);
 		contentPane.add(btnNewButton_1_1);

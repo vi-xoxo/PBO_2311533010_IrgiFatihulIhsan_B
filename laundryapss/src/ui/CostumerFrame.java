@@ -79,7 +79,7 @@ public class CostumerFrame extends JFrame {
 		panel.setLayout(null);
 		
 		JLabel lblNama = new JLabel("Nama Pelanggan");
-		lblNama.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		lblNama.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNama.setBounds(26, 25, 121, 25);
 		panel.add(lblNama);
 		
@@ -89,7 +89,7 @@ public class CostumerFrame extends JFrame {
 		txtNama.setColumns(10);
 		
 		JLabel lblAlamat = new JLabel("Alamat");
-		lblAlamat.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		lblAlamat.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblAlamat.setBounds(89, 74, 58, 25);
 		panel.add(lblAlamat);
 		
@@ -99,7 +99,7 @@ public class CostumerFrame extends JFrame {
 		panel.add(txtAlamat);
 		
 		JLabel lblNohp = new JLabel("No. HP");
-		lblNohp.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		lblNohp.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNohp.setBounds(89, 122, 51, 25);
 		panel.add(lblNohp);
 		
@@ -120,7 +120,7 @@ public class CostumerFrame extends JFrame {
 				loadTable();
 			}
 		});
-		btnSave.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnSave.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnSave.setBounds(165, 193, 85, 40);
 		panel.add(btnSave);
 		
@@ -142,7 +142,7 @@ public class CostumerFrame extends JFrame {
 				}
 			}
 		});
-		btnUpdate.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnUpdate.setBounds(271, 193, 85, 40);
 		panel.add(btnUpdate);
 		
@@ -158,7 +158,7 @@ public class CostumerFrame extends JFrame {
 				}
 			}
 		});
-		btnDelete.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnDelete.setBounds(383, 193, 85, 40);
 		panel.add(btnDelete);
 		
@@ -170,7 +170,7 @@ public class CostumerFrame extends JFrame {
 				dispose();
 			}
 		});
-		btnCancel.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnCancel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnCancel.setBounds(585, 193, 85, 40);
 		panel.add(btnCancel);
 		
