@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import confg.Database;
+import config.Database;
 import model.User;
 
 public class UserRepo implements UserDAO{
@@ -21,7 +21,7 @@ final String delete = "DELETE FROM user WHERE id=?;";
 final String update = "UPDATE user SET name=?, username=?, password=? WHERE id=?";
 
 public UserRepo() {
-	connection = Database.koneksi();
+	connection = Database.getConnection();
 }
 
 	@Override

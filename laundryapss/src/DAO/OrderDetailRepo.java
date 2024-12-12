@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import confg.Database;
+import config.Database;
 import model.Costumer;
 import model.OrderDetail;
 
@@ -25,7 +25,7 @@ public class OrderDetailRepo implements OrderDetailDAO{
 	final String selectById = "SELECT * FROM order_detail WHERE id_order = ?;" ;
 	
 	public OrderDetailRepo() {
-		connection = Database.koneksi();
+		connection = Database.getConnection();
 		}
 	
 	@Override

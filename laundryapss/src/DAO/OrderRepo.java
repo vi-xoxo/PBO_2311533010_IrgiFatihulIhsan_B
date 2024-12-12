@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import confg.Database;
+import config.Database;
 import model.Costumer;
 import model.Order;
 
@@ -24,7 +24,7 @@ public class OrderRepo implements OrderDAO{
 	
 	
 	public OrderRepo() {
-		connection = Database.koneksi();
+		connection = Database.getConnection();
 		}
 	
 			

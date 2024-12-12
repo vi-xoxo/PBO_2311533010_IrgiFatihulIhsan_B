@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import confg.Database;
+import config.Database;
 import model.Service;
 
 
@@ -22,7 +22,7 @@ public class ServiceRepo implements ServiceDAO{
 	final String update = "UPDATE service SET jenis = ?, status = ?, harga = ? WHERE id = ?;";
 	
 	public ServiceRepo() {
-		connection = Database.koneksi();
+		connection = Database.getConnection();
 		}
 	
 	@Override

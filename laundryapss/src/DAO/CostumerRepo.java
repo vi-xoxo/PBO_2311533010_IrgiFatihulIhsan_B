@@ -10,8 +10,9 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import confg.Database;
+import config.Database;
 import model.Costumer;
+import model.CostumerBuilder;
 
 
 public class CostumerRepo implements CostumerDAO{
@@ -22,7 +23,7 @@ public class CostumerRepo implements CostumerDAO{
 	final String update = "UPDATE costumer SET nama=?, alamat=?, nohp=? WHERE id=?;";
 	
 	public CostumerRepo() {
-		connection = Database.koneksi();
+		connection = Database.getConnection();
 		}
 	
 	@Override
@@ -53,11 +54,12 @@ public class CostumerRepo implements CostumerDAO{
 			Statement st = connection.createStatement();
 			ResultSet rs = st.executeQuery(select);
 			while(rs.next()) {
-				Costumer costumer = new Costumer();
-				costumer.setId(rs.getString("id"));
-				costumer.setNama(rs.getString("nama"));
-				costumer.setAlamat(rs.getString("alamat"));
-				costumer.setNohp(rs.getString("nohp"));
+				Costumer costumer = new CostumerBuilder()
+						.setId(rs.getString("id"))
+						.setNama(rs.getString("nama"))
+						.setAlamat(rs.getString("alamat"))
+						.setHp(rs.getString("nohp"))
+						.build();
 				ls.add(costumer);
 			}
 		}catch(SQLException e) {

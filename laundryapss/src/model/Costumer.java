@@ -1,40 +1,38 @@
 package model;
 
 public class Costumer {
-	String id, nama, alamat, nohp;
+	private String id,nama,email, alamat, nohp;
+	
+	public Costumer(String id, String nama, String email, String alamat, String nohp) {
+		this.id = id;
+		this.nama = nama;
+		this.email = email;
+		this.alamat = alamat;
+		this.nohp = nohp;
+	}
 
 	public String getId() {
 		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	public String getNama() {
 		return nama;
 	}
 
-	public void setNama(String nama) {
-		this.nama = nama;
+	public String getEmail() {
+		return email;
 	}
 
 	public String getAlamat() {
 		return alamat;
 	}
 
-	public void setAlamat(String alamat) {
-		this.alamat = alamat;
-	}
-
 	public String getNohp() {
 		return nohp;
 	}
-
-	public void setNohp(String nohp) {
-		this.nohp = nohp;
-	}
 	
+	
+	 
 	
 
 }

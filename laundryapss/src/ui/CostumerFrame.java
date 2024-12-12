@@ -7,6 +7,29 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import DAO.CostumerRepo;
+import model.Costumer;
+import model.CostumerBuilder;
+import table.TableCostumer;
+
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.*;
+import java.awt.event.ActionEvent;
+import javax.swing.JTable;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JScrollPane;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import DAO.CostumerRepo;
 import DAO.UserRepo;
 import model.Costumer;
 import model.User;
@@ -111,10 +134,15 @@ public class CostumerFrame extends JFrame {
 		JButton btnSave = new JButton("Save");
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Costumer costumer = new Costumer();
+				Costumer costumer = new CostumerBuilder()
+						.setNama(txtNama.getText())
+						.setAlamat(txtAlamat.getText())
+						.setHp(txtNohp.getText())
+						.build();
+				/*Costumer costumer = new Costumer(id, id, id, id, id);
 				costumer.setNama(txtNama.getText());
 				costumer.setAlamat(txtAlamat.getText());
-				costumer.setNohp(txtNohp.getText());
+				costumer.setNohp(txtNohp.getText());*/
 				cst.save(costumer);
 				reset();
 				loadTable();
@@ -128,11 +156,18 @@ public class CostumerFrame extends JFrame {
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(id != null) {
-					Costumer costumer = new Costumer();
+					Costumer costumer = new CostumerBuilder()
+							.setId(id)
+							.setNama(txtNama.getText())
+							.setAlamat(txtAlamat.getText())
+							.setHp(txtNohp.getText())
+							.build();
+					
+					/*Costumer costumer = new Costumer();
 					costumer.setNama(txtNama.getText());
 					costumer.setAlamat(txtAlamat.getText());
 					costumer.setNohp(txtNohp.getText());
-					costumer.setId(id);
+					costumer.setId(id);*/
 					cst.update(costumer);
 					reset();
 					loadTable();
